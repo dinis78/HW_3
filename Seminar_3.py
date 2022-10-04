@@ -36,9 +36,16 @@ import random
 
 # №3. Напишите программу, которая будет преобразовывать десятичное число в двоичное
 
-num = int(input('Введите целое число: ')) 
-x=format(num, 'b')  #Переводим в двоичное
-print(x)
+# num = int(input('Введите целое число: ')) 
+# x=format(num, 'b')  #Переводим в двоичное
+# print(x)
 
+#№ 4. Задайте список из вещественных чисел. Напишите программу, которая
+# найдёт разницу между максимальным и минимальным значением дробной части элементов. 
 
-
+my_list= [1.1, 1.2, 3.1, 5, 10.01]
+new_list=[(num%1) for num in my_list if isinstance(num, float)]
+print(new_list)
+max_num=max(new_list)
+min_num=min(new_list)
+print('разница = ', round(max_num,2)-round(min_num,2))
