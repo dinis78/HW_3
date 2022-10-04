@@ -21,16 +21,24 @@ import random
 # №2. Напишите программу, которая найдёт произведение
 # пар чисел списка. Парой считаем первый и последний
 # элемент, второй и предпоследний и т.д.
-# import random
-num=int(input('Введите число '))
-num_list=[]
-for i in range(num):
-   num_list.append(random.randint(1,10))
-print(num_list)
-my_list=[]
-for i in range((len(num_list)+1)//2):
-   my_list.append(num_list[i]*num_list[-1-i])
-print(my_list)
+
+# num=int(input('Введите число '))
+# num_list=[]
+# for i in range(num):
+#    num_list.append(random.randint(1,10))
+# print(num_list)
+# my_list=[]
+# for i in range((len(num_list)+1)//2):
+#    my_list.append(num_list[i]*num_list[-1-i])
+# print(my_list)
+
+#####################################################################
+
+# №3. Напишите программу, которая будет преобразовывать десятичное число в двоичное
+
+num = int(input('Введите целое число: ')) 
+x=format(num, 'b')  #Переводим в двоичное
+print(x)
 
 
 
