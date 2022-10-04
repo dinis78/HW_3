@@ -40,12 +40,35 @@ import random
 # x=format(num, 'b')  #Переводим в двоичное
 # print(x)
 
+################################################################################
+
 #№ 4. Задайте список из вещественных чисел. Напишите программу, которая
 # найдёт разницу между максимальным и минимальным значением дробной части элементов. 
 
-my_list= [1.1, 1.2, 3.1, 5, 10.01]
-new_list=[(num%1) for num in my_list if isinstance(num, float)]
-print(new_list)
-max_num=max(new_list)
-min_num=min(new_list)
-print('разница = ', round(max_num,2)-round(min_num,2))
+# my_list= [1.1, 1.2, 3.1, 5, 10.01]
+# new_list=[(num%1) for num in my_list if isinstance(num, float)]
+# print(new_list)
+# max_num=max(new_list)
+# min_num=min(new_list)
+# print('разница = ', round(max_num,2)-round(min_num,2))
+
+#############################################################
+
+# №5. Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов
+
+k = int(input('Введите число: '))
+print(k)
+nego = [1,-1]
+fibo = [1,1]
+for i in range(2,k):
+    lst_fibo = fibo[i-1]+fibo[i-2]
+    fibo.append(lst_fibo)
+for x, elem in enumerate(fibo, 2):
+    if x % 2 != 0:
+        lst_nego = elem * -1
+        nego.append(lst_nego)
+    else:
+        nego.append(elem)
+nego.reverse()
+nego.append(0)
+print(nego+fibo)
